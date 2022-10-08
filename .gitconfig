@@ -1,0 +1,6 @@
+[user]
+	email = aap7640@gmail.com
+	name = Aaron Perez
+
+[alias]
+	graph = log --oneline --graph --decorate
