@@ -2,12 +2,18 @@
 name = "c"
 indent = { tab-width = 4, unit = "    " }
 auto-format = false
-language-server = { command = "clangd" }
-file-types = ["c", "h"]
+file-types = [ "c", "h" ]
+language-servers = [ "c-lsp" ]
 
 [[language]]
 name = "python"
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
-config = {}
+language-servers = [ "python-lsp" ]
+
+[language-server.c-lsp]
+command = "clangd"
+
+[language-server.python-lsp]
+command = "pyright-langserver"
+args = ["--stdio"]
